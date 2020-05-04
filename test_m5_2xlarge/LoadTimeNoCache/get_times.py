@@ -9,9 +9,8 @@ if __name__ == "__main__":
 	path = sys.argv[1]
 	executors = sys.argv[2]
 	cores = sys.argv[3]
-	ds_size = sys.argv[4]
 	files = os.listdir(path)
-	output = open("./results_load_"+ds_size"+/executors+"_worker_"+cores+"_cores_load_time.txt", "a")	
+	output = open("./results_load/"+executors+"_worker_"+cores+"_cores_load_time.txt", "a")	
 	# we want to calculate the load time in each test, so we consider all files in path
 	for f in files:
 		with urllib.request.urlopen("http://localhost:18080/api/v1/applications/"+f+"/stages/0/0/") as url:

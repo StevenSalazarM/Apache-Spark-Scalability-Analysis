@@ -9,12 +9,11 @@ if __name__ == "__main__":
 	path = sys.argv[1]
 	executors = int(sys.argv[2])
 	cores = int(sys.argv[3])
-	ds_size = sys.argv[4]
 	files = os.listdir(path)
-	results_out = open("./results_out_"+ds_size+"/"+str(executors)+"_worker_"+str(cores)+"_cores_output_time.txt", "a")
-	results_jobs = open("./results_jobs_"+ds_size+"/"+str(executors)+"_worker_"+str(cores)+"_cores_jobs_time.txt", "a")
-	results_overall = open("./results_overall_"+ds_size+"/"+str(executors)+"_worker_"+str(cores)+"_cores_overall_time.txt", "a")	
-	results_shuffle = open("./results_shuffle_"+ds_size+"/"+str(executors)+"_worker_"+str(cores)+"_cores_shuffle_time.txt", "a")
+	results_out = open("./results_output/"+str(executors)+"_worker_"+str(cores)+"_cores_output_time.txt", "a")
+	results_jobs = open("./results_jobs/"+str(executors)+"_worker_"+str(cores)+"_cores_jobs_time.txt", "a")
+	results_overall = open("./results_overall/"+str(executors)+"_worker_"+str(cores)+"_cores_overall_time.txt", "a")	
+	results_shuffle = open("./results_shuffle/"+str(executors)+"_worker_"+str(cores)+"_cores_shuffle_time.txt", "a")
 	# we want to calculate the times in each test, so we consider all files in path
 	for f in files:
 		with urllib.request.urlopen("http://localhost:18080/api/v1/applications/"+f+"/") as url:

@@ -5,11 +5,12 @@ from matplotlib.font_manager import FontProperties
 path = sys.argv[1]
 executors = int(sys.argv[2])
 cores = int(sys.argv[3])
+ds_size = sys.argv[4]
 average_overall_time = [[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]
 workers = [1, 2, 3]
 for w in range(3):
 	for c in range(8):
-		file_ov = open("OverallTimeCache/"+str(w+1)+"_worker_"+str(c+1)+"_cores_overall_time.txt", "r") 
+		file_ov = open("OverallTimeCache/results_overall_"+ds_size+"/"+str(w+1)+"_worker_"+str(c+1)+"_cores_overall_time.txt", "r") 
 		count=0
 		for line in file_ov:
 			if line == "\n": break 
