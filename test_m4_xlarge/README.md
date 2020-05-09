@@ -15,7 +15,7 @@ OverallTimeCache and OverallTimeNoCache contains:
 
 
 Images contains the plots obtained by using the python scripts:
-- plot_overall_time.py: this script shows 4 functions with an X axis in [1-8] (so X workers).
+- plot_overall_time.py: this script shows 4 functions with an X axis in [1-8] (so X cores).
 - plot_overall_time2.py: this script shows 8 functions with an X axis in [1-4] (so X workers).
 - plot_stacked_chart.py: this script shows the contribution of the different phases in the overall time.
 
