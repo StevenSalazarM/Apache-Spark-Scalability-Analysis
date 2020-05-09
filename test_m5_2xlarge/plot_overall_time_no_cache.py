@@ -3,7 +3,7 @@ from matplotlib.font_manager import FontProperties
 
 
 average_overall_time = [[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]
-workers = [1, 2, 3, 4, 5, 6, 7, 8]
+cores = [1, 2, 3, 4, 5, 6, 7, 8]
 for w in range(3):
 	for c in range(8):
 		file_ov = open("OverallTimeNoCache/results_overall/"+str(w+1)+"_worker_"+str(c+1)+"_cores_overall_time.txt", "r") 
@@ -17,15 +17,10 @@ for w in range(3):
 
 fig = plt.figure(figsize=(18,6))
 ax = fig.add_subplot(111)
-ax.plot(workers, average_overall_time[0], label='1 Worker [Cache]', color='blue')
-ax.plot(workers, average_overall_time[1], label='2 Workers [Cache]', color='green')
-ax.plot(workers, average_overall_time[2], label='3 Workers [Cache]', color='violet')
+ax.plot(cores, average_overall_time[0], label='1 Worker [NoCache]', color='blue')
+ax.plot(cores, average_overall_time[1], label='2 Workers [NoCache]', color='green')
+ax.plot(cores, average_overall_time[2], label='3 Workers [NoCache]', color='violet')
 
-#ax.plot(workers, [0, 279, 280, 299, 300, 306, 312, 322, 340], label='4 cores', color='yellow')
-#ax.plot(workers, [0, 279, 280, 299, 300, 306, 312, 322, 340], label='5 cores', color='black')
-#ax.plot(workers, [0, 279, 280, 299, 300, 306, 312, 322, 340], label='6 cores', color='orange')
-#ax.plot(workers, [0, 279, 280, 299, 300, 306, 312, 322, 340], label='7 cores', color='grey')
-#ax.plot(wo, [0, 279, 280, 299, 300, 306, 312, 322, 340], label='8 cores', color='violet')
 # Add first legend:  only labeled data is included
 
 leg1 = ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))

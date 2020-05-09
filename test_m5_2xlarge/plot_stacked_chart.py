@@ -72,8 +72,8 @@ for c in range(8):
 	file_ov.close()
 
 # print(load_time)
-# print(overall_time)
-# print(jobs_time)
+print(overall_time)
+print(jobs_time)
 # print(shuffle_time)
 # print(output_time)
 
