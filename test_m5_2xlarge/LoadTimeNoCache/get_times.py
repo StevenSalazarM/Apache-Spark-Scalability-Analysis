@@ -2,7 +2,7 @@ import sys
 import os
 import urllib.request
 import json 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # this python script is used to get the load time in each test
 if __name__ == "__main__":
@@ -29,6 +29,11 @@ if __name__ == "__main__":
 		FMT = '%H:%M:%S.%f'
 		# duration = completionTime - submissionTime (considering only Hours:Minutes:Seconds)
 		duration = datetime.strptime(loaded_r['completionTime'][11:-3], FMT) - datetime.strptime(loaded_r['submissionTime'][11:-3], FMT)
+		
+		# time may be negative if we move from one day to other so we must add an extra day in this case		
+		if duration.total_seconds() < 0:
+			duration += timedelta(days=1)
+		
 		duration_in_nano = duration.total_seconds()*1000000000
 		# num_tasks is the number of tasks normalized, for example if we had in total 120 tasks with 2 cores and 2 exectors
 		# we had a parallelization of 4 tasks and we should multiply the shuffle_write_time by 30 like if they were executed in serial way.

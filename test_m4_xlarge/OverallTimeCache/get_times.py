@@ -2,7 +2,7 @@ import sys
 import os
 import urllib.request
 import json 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # this python script is used to get the load time in each test
 if __name__ == "__main__":
@@ -34,8 +34,23 @@ if __name__ == "__main__":
 		job1 = loaded_jobs[1]
 		job2 = loaded_jobs[0]
 		job0_duration = datetime.strptime(job0['completionTime'][11:-3], FMT) - datetime.strptime(job0['submissionTime'][11:-3], FMT)
+
+		# time may be negative if we move from one day to other so we must add an extra day in this case
+		if job0_duration.total_seconds() < 0:
+			job0_duration += timedelta(days=1)
+
 		job1_duration = datetime.strptime(job1['completionTime'][11:-3], FMT) - datetime.strptime(job1['submissionTime'][11:-3], FMT)
+
+		# time may be negative if we move from one day to other so we must add an extra day in this case		
+		if job1_duration.total_seconds() < 0:
+			job1_duration += timedelta(days=1)
+
 		job2_duration = datetime.strptime(job2['completionTime'][11:-3], FMT) - datetime.strptime(job2['submissionTime'][11:-3], FMT)
+
+		# time may be negative if we move from one day to other so we must add an extra day in this case		
+		if job2_duration.total_seconds() < 0:
+			job_duration += timedelta(days=1)
+		
 		jobs_duration=job0_duration.total_seconds()+job1_duration.total_seconds()+job2_duration.total_seconds()
 		# print("Jobs duration: "+str(jobs_duration))		
 		output_duration = 0
