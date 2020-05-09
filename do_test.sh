@@ -4,7 +4,7 @@
 if [[ ( $1 == "" || $2 == "" || $3 == "") ]]; then
         echo "First param is used for file size: original, 1gb, 5gb, 10gb, 15gb."
         echo "Second param is used for executor cores [2,8]."
-        echo "Third param is used for class name: LoadCache, LoadNoCache, CarAccidentsCache or CarAccidentsNoCache."
+        echo "Third param is used for class name: LoadTimeCache, LoadTimeNoCache, CarAccidentsCache or CarAccidentsNoCache."
 else
         for (( c=1; c<=10; c++ ))
                         do
