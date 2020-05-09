@@ -11,7 +11,7 @@ if __name__ == "__main__":
 	cores = int(sys.argv[3])
 	ds_size = sys.argv[4]
 	files = os.listdir(path)
-	results_out = open("./results_out_"+ds_size+"/"+str(executors)+"_worker_"+str(cores)+"_cores_output_time.txt", "a")
+	results_out = open("./results_output_"+ds_size+"/"+str(executors)+"_worker_"+str(cores)+"_cores_output_time.txt", "a")
 	results_jobs = open("./results_jobs_"+ds_size+"/"+str(executors)+"_worker_"+str(cores)+"_cores_jobs_time.txt", "a")
 	results_overall = open("./results_overall_"+ds_size+"/"+str(executors)+"_worker_"+str(cores)+"_cores_overall_time.txt", "a")	
 	results_shuffle = open("./results_shuffle_"+ds_size+"/"+str(executors)+"_worker_"+str(cores)+"_cores_shuffle_time.txt", "a")
