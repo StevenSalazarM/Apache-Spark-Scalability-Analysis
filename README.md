@@ -1,5 +1,5 @@
 # Apache-Spark-Performance-Analysis
-The purpose of this project is to analyse the performance obtained in an application using the Apache-Spark Dataframe API.
+The purpose of this project is to perform a scalability analysis in an application using the Apache-Spark Dataframe API.
 
 ## Tests
 - The tests were performed using two EC2 Instances Types: m4.xlarge and m5.2xlarge. The directories test_m5_2xlarge and test_m4_xlarge contain the results obtained from 6 tests type (LoadTimeCache, LoadTimeNoCache, CarAccidentsCache, CarAccidensNoCache, CarAccidentsXQueriesCache and CarAccidentsXQueriesNoCache) and 7 different dataset (0.3M, 0.5M, 1M, 2M, 5M  and 10M rows of dataset and 15GB dataset size).
@@ -22,7 +22,7 @@ The purpose of this project is to analyse the performance obtained in an applica
 	
 	`./launch_ec2_instance.sh worker_8_cores 3`
 
-	** Before executing the script please read the comments inside *launch_ec2_instance.sh***, you need to create the template from the AWS Web Console, then in the script set the values of subnet_id, key_name and ami_id that you prefer (be consistent with the values you selected during the template creation, subnet_id is any subnet_id since it is not possible to select both security_group and subnet in a template)
+	**Before executing the script please read the comments inside *launch_ec2_instance.sh* **, you need to create the template from the AWS Web Console, then in the script set the values of subnet_id, key_name and ami_id that you prefer (be consistent with the values you selected during the template creation, subnet_id is any subnet_id since it is not possible to select both security_group and subnet in a template)
 
 ## Usage
 
