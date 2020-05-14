@@ -20,3 +20,34 @@ Images contains the plots obtained by using the python scripts:
 - plot_stacked_chart.py: this script shows the contribution of the different phases in the overall time.
 
 ## Usage of the python scripts
+
+
+`$ python3 ./plot_overall_time.py Cache 10M overall` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/overall_time_10M_cache.png)
+
+
+`$ python3 ./plot_overall_time.py NoCache 10M overall` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/overall_time_10M_no_cache.png)
+
+
+`$ python3 ./plot_overall_time2.py Cache 10M overall` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_x_cores_f_worker/overall_time_10M_cache.png)
+
+
+`$ python3 ./plot_overall_time2.py NoCache 10M overall` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_x_cores_f_worker/overall_time_10M_no_cache.png)
+
+
+`$ python3 ./plot_stacked_chart.py 7 Cache 10M` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib/contrib_7_worker_10M_cache.png)
+
+
+`$ python3 ./plot_overall_time2.py 7 NoCache 10M` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib/contrib_7_worker_10M_no_cache.png)
+
