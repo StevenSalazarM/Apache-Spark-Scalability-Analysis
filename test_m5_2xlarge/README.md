@@ -65,7 +65,7 @@ Images contains the plots obtained by using the python scripts:
 ![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m5_2xlarge/Images/contrib_3_worker_cache.png)
 
 
-`python3 ./plot_stacked_chart.py 3 NoCache` 
+`$ python3 ./plot_stacked_chart.py 3 NoCache` 
 
 ![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m5_2xlarge/Images/contrib_3_worker_no_cache.png)
 

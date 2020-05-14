@@ -47,7 +47,7 @@ Images contains the plots obtained by using the python scripts:
 ![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib/contrib_7_worker_10M_cache.png)
 
 
-`$ python3 ./plot_overall_time2.py 7 NoCache 10M` 
+`$ python3 ./plot_stacked_chart.py 7 NoCache 10M` 
 
 ![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib/contrib_7_worker_10M_no_cache.png)
 
