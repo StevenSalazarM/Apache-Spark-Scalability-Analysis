@@ -39,7 +39,7 @@ ax.plot(workers, average_overall_time[3], label='4 Cores ['+cache+']', color='gr
 leg1 = ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 ax.add_artist(leg1)
 
-ax.set_title("Overall Time "+cache+" ("+ds_size+" dataset)")
+ax.set_title(time_type[0].upper()+time_type[1:]+"Time "+cache+" ("+ds_size+" dataset)")
 plt.xlabel('Number of workers')
 plt.ylabel('Seconds')
 plt.show()
