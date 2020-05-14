@@ -6,21 +6,24 @@ import sys
 cache = sys.argv[1]
 # can be 0_3M, 0_5M, 1M, 2M, 5M or 10M
 ds_size = sys.argv[2]
-# can be overall, shuffle, jobs, out
+# can be overall, shuffle, jobs, out or load
 time_type = sys.argv[3]
 
+dir_type="OverallTime"		
+if time_type == "load":
+	dir_type="LoadTime"
 # each list in average_overall_time contain the values related to workers and cores (e.g. the first list is the used for 1 cores and worker. The last one is for 4 cores 8 worker)
 average_overall_time = [[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]
 workers = [1, 2, 3, 4, 5, 6, 7, 8]
 for c in range(4):
 	for w in range(8):
-		file_ov = open("OverallTime"+cache+"/results_"+time_type+"_"+ds_size+"/"+str(w+1)+"_worker_"+str(c+1)+"_cores_"+time_type+"_time.txt", "r") 
+		file_ov = open(dir_type+cache+"/results_"+time_type+"_"+ds_size+"/"+str(w+1)+"_worker_"+str(c+1)+"_cores_"+time_type+"_time.txt", "r") 
 		count=0		
 		# lets get the average value of X test in each file
 		# count is used to calculate X		
 		for line in file_ov:
 			if line == "\n": break 
-			count += 1    			
+			count += 1    		
 			average_overall_time[c][w] += float(line)
 		average_overall_time[c][w] /= count
 		file_ov.close()
