@@ -1,4 +1,4 @@
-# Apache-Spark-Performance-Analysis
+# Apache-Spark-Scalability-Analysis
 The purpose of this project is to perform a scalability analysis in an application using the Apache-Spark Dataframe API.
 
 ## Tests
@@ -22,7 +22,7 @@ The purpose of this project is to perform a scalability analysis in an applicati
 	
 	`./launch_ec2_instance.sh worker_8_cores 3`
 
-	**Before executing the script please read the comments inside *launch_ec2_instance.sh* **, you need to create the template from the AWS Web Console, then in the script set the values of subnet_id, key_name and ami_id that you prefer (be consistent with the values you selected during the template creation, subnet_id is any subnet_id since it is not possible to select both security_group and subnet in a template)
+	**Before executing the script please read the comments inside *launch_ec2_instance.sh***, you need to create the template from the AWS Web Console, then in the script set the values of subnet_id, key_name and ami_id that you prefer (be consistent with the values you selected during the template creation, subnet_id is any subnet_id since it is not possible to select both security_group and subnet in a template)
 
 ## Usage
 
@@ -30,7 +30,7 @@ The purpose of this project is to perform a scalability analysis in an applicati
 - Apache-Spark 2.4.
 - An account on AWS and the aws-cli. 
 - Access to EC2 instances with at least 20GB memory (it depends on the type of test that you want to perform, for example if you want to use a 15GB dataset you should have at least 20GB)
-- An Apache-Spark application, the results obtained in the two test directories are related to [Apache-Spark-Car-Accidents-in-NY](https://github.com/StevenSalazarM/Car-Accidents-in-NY/) application.
+- An Apache-Spark application, the results obtained in the two test directories are related to [Apache-Spark-Car-Accidents-in-NY](https://github.com/StevenSalazarM/Apache-Spark-Car-Accidents-in-NY/) application.
 
 ### Test replication
 
