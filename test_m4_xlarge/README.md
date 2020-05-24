@@ -17,7 +17,8 @@ OverallTimeCache and OverallTimeNoCache contains:
 Images contains the plots obtained by using the python scripts:
 - plot_overall_time.py: this script shows 4 functions with an X axis in [1-8] (so X cores).
 - plot_overall_time2.py: this script shows 8 functions with an X axis in [1-4] (so X workers).
-- plot_stacked_chart.py: this script shows the contribution of the different phases in the overall time.
+- plot_stacked_chart.py: this script shows the contribution of the different phases in the overall time by increasing the number of cores [1-4] given a number of Worker received as parameter.
+- plot_stacked_chart2.py: this script shows the contribution of the different phases in the overall time by increasing the number of Spark Workers [1-8] given a number of cores per worker received as parameter.
 
 ## Usage of the python scripts
 
@@ -50,4 +51,13 @@ Images contains the plots obtained by using the python scripts:
 `$ python3 ./plot_stacked_chart.py 7 NoCache 10M` 
 
 ![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib/contrib_7_worker_10M_no_cache.png)
+
+
+`$ python3 ./plot_stacked_chart.py 3 Cache 10M` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib2/contrib_y_workers_3_cores_cache.png)
+
+`$ python3 ./plot_stacked_chart.py 3 NoCache 10M` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib2/contrib_y_workers_3_cores_no_cache.png)
 
