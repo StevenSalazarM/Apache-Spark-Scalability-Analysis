@@ -20,30 +20,15 @@ MultipleQueriesCache and MultipleQueriesNoCache contains:
 * 4 result directory that contain the results obtained in 9*10 test for each ds_size (for now only 15gb was performed). So for MultipleQueries with m5.2xlarge 180 tests were performed.
 
 Images contains the plots obtained by using the python scripts:
-- plot_multiple_queries_cache.py
-- plot_multiple_queries_no_cache.py
-- plot_multiple_queries.py
 - plot_overall_time_cache.py
 - plot_overall_time_no_cache.py
 - plot_overall_time.py
+- plot_multiple_queries_cache.py
+- plot_multiple_queries_no_cache.py
+- plot_multiple_queries.py
 - plot_stacked_chart.py
 
 ## Usage of the python scripts
-
-`$ python3 ./plot_multiple_queries_cache.py` 
-
-![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m5_2xlarge/Images/multiple_queries_cache.png)
-
-
-`$ python3 ./plot_multiple_queries_no_cache.py` 
-
-![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m5_2xlarge/Images/multiple_queries_no_cache.png)
-
-
-`$ python3 ./plot_multiple_queries.py` 
-
-![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m5_2xlarge/Images/multiple_queries_vs.png)
-
 
 `$ python3 ./plot_overall_time_cache.py` 
 
@@ -58,6 +43,21 @@ Images contains the plots obtained by using the python scripts:
 `$ python3 ./plot_overall_time.py` 
 
 ![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m5_2xlarge/Images/overall_time_vs.png)
+
+
+`$ python3 ./plot_multiple_queries_cache.py` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m5_2xlarge/Images/multiple_queries_cache.png)
+
+
+`$ python3 ./plot_multiple_queries_no_cache.py` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m5_2xlarge/Images/multiple_queries_no_cache.png)
+
+
+`$ python3 ./plot_multiple_queries.py` 
+
+![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m5_2xlarge/Images/multiple_queries_vs.png)
 
 
 `$ python3 ./plot_stacked_chart.py 3 Cache` 

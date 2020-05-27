@@ -16,6 +16,7 @@ for w in range(3):
 		file_ov.close()
 
 fig = plt.figure(figsize=(18,6))
+fig.subplots_adjust(left=0.05,right=0.87)
 ax = fig.add_subplot(111)
 ax.plot(cores, average_overall_time[0], label='1 Worker [Cache]', color='red')
 ax.plot(cores, average_overall_time[1], label='2 Workers [Cache]', color='y')

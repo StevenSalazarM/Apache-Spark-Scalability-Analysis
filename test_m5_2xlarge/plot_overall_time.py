@@ -16,6 +16,7 @@ for w in range(3):
 		file_ov.close()
 
 fig = plt.figure(figsize=(18,6))
+fig.subplots_adjust(left=0.05,right=0.87)
 ax = fig.add_subplot(111)
 ax.plot(cores, average_overall_time[0], label='1 Worker [Cache]', color='red')
 ax.plot(cores, average_overall_time[1], label='2 Workers [Cache]', color='y')
@@ -34,8 +35,8 @@ for w in range(3):
 		average_overall_time[w][c] /= count
 		file_ov.close()
 
-ax.plot(cores, average_overall_time[0], label='1 Worker [No Cache]', color='blue')
-ax.plot(cores, average_overall_time[1], label='2 Workers [No Cache]', color='green')
+ax.plot(cores, average_overall_time[0], label='1 Worker [NoCache]', color='blue')
+ax.plot(cores, average_overall_time[1], label='2 Workers [NoCache]', color='green')
 ax.plot(cores, average_overall_time[2], label='3 Workers [NoCache]', color='violet')
 
 #ax.plot(cores, [0, 279, 280, 299, 300, 306, 312, 322, 340], label='4 cores', color='yellow')
