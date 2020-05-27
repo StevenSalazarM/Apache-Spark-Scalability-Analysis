@@ -27,7 +27,7 @@ leg1 = ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 # Add second legend for the maxes and mins.
 # Manually add the first legend back
 ax.add_artist(leg1)
-ax.set_title("Overall Time No Cache (15GB dataset)")
+ax.set_title("Overall Time Cache (15GB dataset)")
 plt.xlabel('Number of cores')
 plt.ylabel('Seconds')
 plt.show()
