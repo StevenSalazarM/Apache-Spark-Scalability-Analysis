@@ -85,7 +85,8 @@ print(jobs_time)
 computing_time=[j-l-s-out for j, l, s, out in zip(jobs_time, load_time, shuffle_time, output_time)]
 spark_delay = [ov-jobs for ov, jobs in zip(overall_time, jobs_time)]
 print(computing_time)
-fig = plt.figure(figsize=(18,6))
+fig = plt.figure(figsize=(20,6))
+fig.subplots_adjust(left=0.05,right=0.87)
 ax = fig.add_subplot(111)
 
 

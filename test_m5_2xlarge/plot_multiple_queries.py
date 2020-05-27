@@ -38,6 +38,7 @@ for q in range(9):
 		file_readnc.close()
 
 fig = plt.figure(figsize=(20,6))
+fig.subplots_adjust(left=0.05,right=0.87)
 ax = fig.add_subplot(111)
 ax.plot(queries, average_overall_time, label='Overall T.[Cache]', color='red')
 ax.plot(queries, average_read_time, label='Read T.[Cache]', color='y')
