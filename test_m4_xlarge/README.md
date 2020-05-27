@@ -33,31 +33,11 @@ Images contains the plots obtained by using the python scripts:
 ![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/overall_time_10M_no_cache.png)
 
 
-`$ python3 ./plot_overall_time2.py Cache 10M overall` 
-
-![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_x_cores_f_worker/overall_time_10M_cache.png)
-
-
-`$ python3 ./plot_overall_time2.py NoCache 10M overall` 
-
-![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_x_cores_f_worker/overall_time_10M_no_cache.png)
-
-
-`$ python3 ./plot_stacked_chart.py 7 Cache 10M` 
-
-![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib/contrib_7_worker_10M_cache.png)
-
-
-`$ python3 ./plot_stacked_chart.py 7 NoCache 10M` 
-
-![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib/contrib_7_worker_10M_no_cache.png)
-
-
-`$ python3 ./plot_stacked_chart.py 3 Cache 10M` 
+`$ python3 ./plot_stacked_chart2.py 3 Cache 10M` 
 
 ![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib2/contrib_y_workers_3_cores_cache.png)
 
-`$ python3 ./plot_stacked_chart.py 3 NoCache 10M` 
+`$ python3 ./plot_stacked_chart2.py 3 NoCache 10M` 
 
 ![](https://github.com/StevenSalazarM/Apache-Spark-Scalability-Analysis/blob/master/test_m4_xlarge/Images/prova_contrib2/contrib_y_workers_3_cores_no_cache.png)
 
