@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
 		# time may be negative if we move from one day to other so we must add an extra day in this case		
 		if job2_duration.total_seconds() < 0:
-			job_duration += timedelta(days=1)
+			job2_duration += timedelta(days=1)
 		
 		jobs_duration=job0_duration.total_seconds()+job1_duration.total_seconds()+job2_duration.total_seconds()
 		print(f+"Jobs duration: "+str(jobs_duration)+" from " +str(job0_duration.total_seconds())+" " +str(job1_duration.total_seconds())+ "  " + str(job2_duration.total_seconds()))		
