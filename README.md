@@ -34,4 +34,10 @@ The purpose of this project is to perform a scalability analysis in an applicati
 
 ### Test replication
 
+## Acknowledgements
+
+This project was made for the Middleware Technologies for Distributed Systems course at Politecnico di Milano. This project was one of three projects that were made with the collaboration of:
+
+- [Bernardo Menicagli](https://github.com/browser-bug)
+- [Alberto Rossettini](https://github.com/albeRoss)
 
