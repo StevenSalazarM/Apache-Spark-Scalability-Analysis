@@ -1,6 +1,10 @@
 # Apache-Spark-Scalability-Analysis
 The purpose of this project is to perform a scalability analysis in an application using the Apache-Spark Dataframe API.
 
+In particular, the metrics considered for the analysis are overall execution time, load time, output time and communication time obtained by increasing the number of Workers, Cores per Worker and Dataset Size.
+
+The Apache-Spark application considered for the analysis can be found at [Apache-Spark-Car-Accidents-in-New York](https://github.com/StevenSalazarM/Apache-Spark-Car-Accidents-in-NY). 
+
 ## Tests
 - The tests were performed using two EC2 Instances Types: m4.xlarge and m5.2xlarge. The directories test_m5_2xlarge and test_m4_xlarge contain the results obtained from 6 tests type (LoadTimeCache, LoadTimeNoCache, CarAccidentsCache, CarAccidensNoCache, CarAccidentsXQueriesCache and CarAccidentsXQueriesNoCache) and 7 different dataset (0.3M, 0.5M, 1M, 2M, 5M  and 10M rows of dataset and 15GB dataset size).
 - do_test.sh is a bash script that was used to submit the spark application in an automated way, for example:
@@ -38,6 +42,6 @@ The purpose of this project is to perform a scalability analysis in an applicati
 
 This project was made for the Middleware Technologies for Distributed Systems course at Politecnico di Milano. This project was one of three projects that were made with the collaboration of:
 
-- [Bernardo Menicagli](https://github.com/browser-bug)
-- [Alberto Rossettini](https://github.com/albeRoss)
+- [Bernardo Menicagli](https://github.com/browser-bug) -- [Car-Accidents-in-NY with OpenMP and MPI](https://github.com/browser-bug/car-accidents-data-processing)
+- [Alberto Rossettini](https://github.com/albeRoss) -- [Kafka Pipeline](https://github.com/albeRoss/kafkapipeline)
 
